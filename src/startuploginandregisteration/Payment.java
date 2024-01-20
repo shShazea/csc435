@@ -331,10 +331,16 @@ String customerName = "";
     try (BufferedReader bookingReader = new BufferedReader(new FileReader(BookingFilePath))) {
         String bookingLine;
         while ((bookingLine = bookingReader.readLine()) != null) {
-            String[] bookingData = bookingLine.split("\\s+");
-            if (bookingData.length >= 5) {
-                customerName = String.join(" ", Arrays.copyOfRange(bookingData, 0, 3)); 
-                int seats = Integer.parseInt(bookingData[4]);
+            String[] bookingData = bookingLine.split(";");
+            if (bookingData.length >= 8) {
+                customerName = bookingData[0];
+                String phoneNo =bookingData[1] ;
+                String date =bookingData[2] ;
+                String pick =bookingData[3] ;
+                String drop =bookingData[4] ;
+                int seats = Integer.parseInt(bookingData[5]);
+                String driver =bookingData[6] ;
+               double fares =Double.parseDouble(bookingData[7]);
                 fare = seats * 5.0;  // Modify this based on your actual fare calculation
                             break;
                         
