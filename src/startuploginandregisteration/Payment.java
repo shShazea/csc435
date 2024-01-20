@@ -323,7 +323,12 @@ private static final String BookingFilePath = "C:/Users/user/Documents/NetBeansP
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-String customerName = "";
+    String customerName = "";
+    String phoneNo= "";
+    String date = "" ;
+    String pick = "";
+    String drop= "" ;
+    int seats=0;
    
     
 
@@ -334,11 +339,11 @@ String customerName = "";
             String[] bookingData = bookingLine.split(";");
             if (bookingData.length >= 8) {
                 customerName = bookingData[0];
-                String phoneNo =bookingData[1] ;
-                String date =bookingData[2] ;
-                String pick =bookingData[3] ;
-                String drop =bookingData[4] ;
-                int seats = Integer.parseInt(bookingData[5]);
+                phoneNo =bookingData[1] ;
+                date =bookingData[2] ;
+                pick =bookingData[3] ;
+                drop =bookingData[4] ;
+                seats = Integer.parseInt(bookingData[5]);
                 String driver =bookingData[6] ;
                double fares =Double.parseDouble(bookingData[7]);
                 fare = seats * 5.0;  // Modify this based on your actual fare calculation
@@ -372,7 +377,10 @@ catch (IOException | NumberFormatException ex) {
     receiptTextArea.append("        *******************************************************************\n\n");
     receiptTextArea.append(new Date().toString() + "\n\n");
     receiptTextArea.append(" Customer Name: " + customerName + "\n\n");
-   
+    receiptTextArea.append(" Pick point: " + pick + "\n\n");
+    receiptTextArea.append(" Drop point: " + drop + "\n\n");
+    receiptTextArea.append(" seat: " + seats + "\n\n");
+    receiptTextArea.append(" Driver Information: " + pick + "\n\n");
     receiptTextArea.append(" Fare: RM " + fare + "\n\n");
     receiptTextArea.append(" Tips to Driver: RM " + tips + "\n\n");
     receiptTextArea.append(" Total Payment: RM " + total + "\n\n\n");

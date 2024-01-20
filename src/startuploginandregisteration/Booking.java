@@ -415,8 +415,6 @@ public class Booking extends javax.swing.JFrame {
             double fares=Double.parseDouble(inFare.getText());
             setVisible(false);
             new Payment (fares).setVisible(true);
-            
-
         }
         catch(Exception e)
         { JOptionPane.showMessageDialog(null, "error");
