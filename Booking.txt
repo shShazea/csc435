@@ -1,0 +1,9 @@
+Shazea Binti Ali 0123456789 1/1/2024 Taman Perumahan Uitm 4 seater Eva,white,Minivan,JKL123,4 4.0
+mai 3414 1/123/12 Pekan Tapah KTM 4 seater Emma,purple,Convertible,MNO789,4 13.0
+Sharifah binti Syed 01123456789 12/1/2024 Pekan Tapah Uitm 4 seater Emma,purple,Convertible,MNO789,4 10.0
+Sharifah binti Syed 0113452345 12/01/2024 Pekan Tapah KTM 6 seater Ryan,gray,Van,GHI890,6 13.0
+syarifah binti syed 0123456756 12/02/2024 Taman Perumahan KTM 4 seater Eva,white,Minivan,JKL123,4 8.0
+syarifah bt syed 0132546785 12/01/2024 Uitm Pekan Tapah 6 seater Ryan,gray,Van,GHI890,6 10.0
+syarifah binti syed 0124563456 12/02/2024 Pekan Tapah Taman Perumahan 6 seater Ryan,gray,Van,GHI890,6 9.0
+Shazea Binti ali 0194663901 20/1/2024 Uitm Pekan Tapah 4 seater Emma,purple,Convertible,MNO789,4 10.0
+Shazea binti Ali 0194663901 1/12/2023 Uitm Pekan Tapah 4 seater Emma,purple,Convertible,MNO789,4 10.0
