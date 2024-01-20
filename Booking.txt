@@ -1,9 +1,5 @@
-
-
-dfg;rty;wedf;Taman Perumahan;Uitm;4 seater;Sophie orange Coupe RST567 4;4.0
-fgfd;ds;erd;Taman Perumahan;Uitm;4 seater;Sophie orange Coupe RST567 4;4.0
-sdfg;sdfg;sdfg;Pekan Tapah;Taman Perumahan;4 seater;Sophie orange Coupe RST567 4;9.0
 Sharifah Shazea Binti Syed Ali;0194663901;21/1/2024;Uitm;KTM;4 seater;Sophie orange Coupe RST567 4;7.0
-sdfy;asdfgh;hjrgh;Pekan Tapah;Uitm;4 seater;Sophie orange Coupe RST567 4;10.0
-sdfgh;dfgh;fgh;Taman Perumahan;Uitm;4 seater;Sophie orange Coupe RST567 4;4.0
-Sharifah Shazea Binti Syed Ali;0194663901;21/1/2024;Uitm;KTM;4 seater;Sophie orange Coupe RST567 4;7.0
+
+SDFGH;SDFG;SDFGH;Pekan Tapah;Taman Perumahan;6 seater;John black Truck DEF234 6;9.0
+Sharifah Shazea Binti Syed Ali;0194663901;qwerg;Pekan Tapah;Uitm;4 seater;Emma purple Convertible MNO789 4;10.0
+zsxdcfv;dfgvb;dfvb;Pekan Tapah;Taman Perumahan;4 seater;Emma purple Convertible MNO789 4;9.0
