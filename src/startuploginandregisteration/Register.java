@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 
 public class Register extends javax.swing.JFrame {
-    private static final String usersFilePath = "C:/Users/user/Documents/UserData.txt";
+    private static final String usersFilePath = "C:/Users/USER/Documents/UserData.txt";
 
     
     public Register() {
