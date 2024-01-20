@@ -16,7 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.FileWriter;
 import javax.swing.JOptionPane;
-import java.util.Date;
+
 
 public class Booking extends javax.swing.JFrame {
     String seat; //store value seat radio
