@@ -328,7 +328,7 @@ private static final String BookingFilePath = "C:/Users/user/Documents/NetBeansP
     String date = "" ;
     String pick = "";
     String drop= "" ;
-    int seats=0;
+    String seats="";
    
     
 
@@ -343,10 +343,9 @@ private static final String BookingFilePath = "C:/Users/user/Documents/NetBeansP
                 date =bookingData[2] ;
                 pick =bookingData[3] ;
                 drop =bookingData[4] ;
-                seats = Integer.parseInt(bookingData[5]);
+                seats = bookingData[5];
                 String driver =bookingData[6] ;
                double fares =Double.parseDouble(bookingData[7]);
-                fare = seats * 5.0;  // Modify this based on your actual fare calculation
                             break;
                         
                    
