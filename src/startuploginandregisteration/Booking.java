@@ -402,15 +402,9 @@ public class Booking extends javax.swing.JFrame {
             Writer.close();
             // Display success message and open Payment window
             JOptionPane.showMessageDialog(null, "success");
-            /*double fares=Double.parseDouble(inFare.getText());
+            double fares=Double.parseDouble(inFare.getText());
             setVisible(false);
-            new Payment (fares).setVisible(true);*/
-             // Create a new instance of the Payment class
-            double fares = 0;
-            Payment paymentWindow = new Payment(fares);
-            paymentWindow.setLocationRelativeTo(null);
-            paymentWindow.setVisible(true);    
-        
+            new Payment (fares).setVisible(true);      
         }catch(Exception e){ 
              // Display error message if an exception occurs
             JOptionPane.showMessageDialog(null, "error");
