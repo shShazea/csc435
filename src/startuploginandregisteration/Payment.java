@@ -22,7 +22,7 @@ String paymentOption;
 double total=0.0;
 double fare=0.00;
 
-private static final String BookingFilePath = "C:/Users/user/Documents/Booking.txt";
+private static final String BookingFilePath = "C:/Users/user/Documents/NetBeansProjects/StartUpLoginAndRegisteration/Booking.txt";
 //private static final String DriverFilePath = "C:/Users/user/Documents/Driver.txt";
 
     public Payment(){
