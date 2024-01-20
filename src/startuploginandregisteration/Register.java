@@ -122,7 +122,7 @@ public class Register extends javax.swing.JFrame {
         jLabel7.setText("REGISTERATION");
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel8.setText("Name*");
+        jLabel8.setText("Full Name*");
 
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

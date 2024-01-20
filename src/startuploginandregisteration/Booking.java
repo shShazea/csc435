@@ -93,7 +93,7 @@ public class Booking extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Candara", 3, 26)); // NOI18N
         jLabel5.setText("Your Journey , Our Priority");
 
-        jLabel6.setText("Name* :");
+        jLabel6.setText("Full Name* :");
 
         jLabel7.setText("Phone Number* :");
 
@@ -402,9 +402,15 @@ public class Booking extends javax.swing.JFrame {
             Writer.close();
             // Display success message and open Payment window
             JOptionPane.showMessageDialog(null, "success");
-            double fares=Double.parseDouble(inFare.getText());
+            /*double fares=Double.parseDouble(inFare.getText());
             setVisible(false);
-            new Payment (fares).setVisible(true);
+            new Payment (fares).setVisible(true);*/
+             // Create a new instance of the Payment class
+            double fares = 0;
+            Payment paymentWindow = new Payment(fares);
+            paymentWindow.setLocationRelativeTo(null);
+            paymentWindow.setVisible(true);    
+        
         }catch(Exception e){ 
              // Display error message if an exception occurs
             JOptionPane.showMessageDialog(null, "error");
