@@ -7,12 +7,9 @@ package startuploginandregisteration;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Date;
 import javax.swing.JTextArea;
-/*import java.text.*;
-import java.awt.print.*;
-import javax.swing.JTextArea;*/
+
 
           
 public class Payment extends javax.swing.JFrame {
@@ -329,7 +326,7 @@ private static final String BookingFilePath = "C:/Users/user/Documents/NetBeansP
     String pick = "";
     String drop= "" ;
     String seats="";
-   
+    String driver ="";
     
 
    
@@ -344,7 +341,7 @@ private static final String BookingFilePath = "C:/Users/user/Documents/NetBeansP
                 pick =bookingData[3] ;
                 drop =bookingData[4] ;
                 seats = bookingData[5];
-                String driver =bookingData[6] ;
+                driver =bookingData[6] ;
                double fares =Double.parseDouble(bookingData[7]);
                             break;
                         
@@ -374,15 +371,15 @@ catch (IOException | NumberFormatException ex) {
     receiptTextArea.append("        *******************************************************************\n");
     receiptTextArea.append("             **                          JOY HOPS RECEIPT                        **\n");
     receiptTextArea.append("        *******************************************************************\n\n");
-    receiptTextArea.append(new Date().toString() + "\n\n");
-    receiptTextArea.append(" Customer Name: " + customerName + "\n\n");
-    receiptTextArea.append(" Pick point: " + pick + "\n\n");
-    receiptTextArea.append(" Drop point: " + drop + "\n\n");
-    receiptTextArea.append(" seat: " + seats + "\n\n");
-    receiptTextArea.append(" Driver Information: " + pick + "\n\n");
-    receiptTextArea.append(" Fare: RM " + fare + "\n\n");
-    receiptTextArea.append(" Tips to Driver: RM " + tips + "\n\n");
-    receiptTextArea.append(" Total Payment: RM " + total + "\n\n\n");
+    receiptTextArea.append(new Date().toString() + "\n");
+    receiptTextArea.append(" Customer Name: " + customerName + "\n");
+    receiptTextArea.append(" Pick point: " + pick + "\n");
+    receiptTextArea.append(" Drop point: " + drop + "\n");
+    receiptTextArea.append(" seat: " + seats + "\n");
+    receiptTextArea.append(" Driver Information: " + driver + "\n");
+    receiptTextArea.append(" Fare: RM " + fare + "\n");
+    receiptTextArea.append(" Tips to Driver: RM " + tips + "\n");
+    receiptTextArea.append(" Total Payment: RM " + total + "\n\n");
     receiptTextArea.append("                                        -------------------------------\n");
     receiptTextArea.append("                                                THANK YOU!\n");
     receiptTextArea.append("                                            Enjoy Your Journey\n");
@@ -412,9 +409,7 @@ this.dispose();        // TODO add your handling code here:
       paymentOption=jRadioButton3.getText();     // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
