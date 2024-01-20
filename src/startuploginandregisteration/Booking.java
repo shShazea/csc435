@@ -408,7 +408,7 @@ public class Booking extends javax.swing.JFrame {
         try
         {
             FileWriter Writer =new FileWriter("Booking.txt",true);
-            Writer.write(name+" "+phone+" "+ Date +" "+ pick +" "+drop+" "+ seat +" "+Driver+" "+fare);
+            Writer.write(name+";"+phone+";"+ Date +";"+ pick +";"+drop+";"+ seat +";"+Driver+";"+fare);
             Writer.write(System.getProperty("line.separator"));
             Writer.close();
             JOptionPane.showMessageDialog(null, "success");

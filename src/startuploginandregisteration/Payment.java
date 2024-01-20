@@ -336,8 +336,6 @@ String customerName = "";
                 customerName = String.join(" ", Arrays.copyOfRange(bookingData, 0, 3)); 
                 int seats = Integer.parseInt(bookingData[4]);
                 fare = seats * 5.0;  // Modify this based on your actual fare calculation
-
-               
                             break;
                         
                    
