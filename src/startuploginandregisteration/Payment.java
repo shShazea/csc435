@@ -12,7 +12,7 @@ public class Payment extends javax.swing.JFrame {
     String paymentOption;
     double total=0.0;
     double fare=0.00;
-
+    // File path for booking data
     private static final String BookingFilePath = "C:/Users/user/Documents/NetBeansProjects/StartUpLoginAndRegisteration/Booking.txt";
     public Payment(){
         initComponents(); 
@@ -311,6 +311,7 @@ public class Payment extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // Retrieve fare and calculate total payment
         fare=Double.parseDouble(jLabel9.getText());
         if(tip.equalsIgnoreCase("RM1"))
           {tips=1;}
@@ -320,26 +321,28 @@ public class Payment extends javax.swing.JFrame {
           {tips=5;}
           
           total=fare+tips;
+          // Display the total in the jTextField2
           jTextField2.setText(String.valueOf(total));        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    String customerName = "";
-    String phoneNo= "";
-    String date = "" ;
-    String pick = "";
-    String drop= "" ;
-    String seats="";
-    String driver ="";
+        // Variables to store booking details
+        String customerName = "";
+        String phoneNo= "";
+        String date = "" ;
+        String pick = "";
+        String drop= "" ;
+        String seats="";
+        String driver ="";
 
-    try (BufferedReader bookingReader = new BufferedReader(new FileReader(BookingFilePath))) {
-        String bookingLine;
-        boolean found = false;
-        while ((bookingLine = bookingReader.readLine()) != null) {
-            String[] bookingData = bookingLine.split(";");
-            if (bookingData.length >= 8) {
-                customerName = bookingData[0];
-                if (jTextField1.getText().equalsIgnoreCase(customerName)) {
+        try (BufferedReader bookingReader = new BufferedReader(new FileReader(BookingFilePath))) {
+            String bookingLine;
+            boolean found = false;
+            while ((bookingLine = bookingReader.readLine()) != null) {
+                String[] bookingData = bookingLine.split(";");
+                if (bookingData.length >= 8) {
+                    customerName = bookingData[0];
+                    if (jTextField1.getText().equalsIgnoreCase(customerName)) {
                         found = true;
                         phoneNo =bookingData[1] ;
                         date =bookingData[2] ;
@@ -350,16 +353,16 @@ public class Payment extends javax.swing.JFrame {
                        double fares =Double.parseDouble(bookingData[7]);
                                     break;
                         
-                }
+                    }
                    
+                }
             }
-        }
-        if (!found) {
+            if (!found) {
                 JOptionPane.showMessageDialog(null, "Name not found in the file.");
             }
-    }   catch (IOException | NumberFormatException ex) {
-        ex.printStackTrace();
-    }
+        }catch (IOException | NumberFormatException ex) {
+            ex.printStackTrace();
+        }
     // Calculate tips based on selected option
     String tipOption = jComboBox1.getSelectedItem().toString();
     if (tipOption.equalsIgnoreCase("RM1")) {
@@ -395,53 +398,29 @@ public class Payment extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void CashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CashActionPerformed
-paymentOption=Cash.getText();        // TODO add your handling code here:
+    paymentOption=Cash.getText();        
     }//GEN-LAST:event_CashActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-    tip=  jComboBox1.getSelectedItem().toString();     // TODO add your handling code here:
+    tip=  jComboBox1.getSelectedItem().toString();    
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-   paymentOption=jRadioButton1.getText();      // TODO add your handling code here:
+    paymentOption=jRadioButton1.getText();      
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-this.dispose();        // TODO add your handling code here:
+    this.dispose();        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-      paymentOption=jRadioButton3.getText();     // TODO add your handling code here:
+      paymentOption=jRadioButton3.getText();     
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+    // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Payment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Payment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Payment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Payment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Payment().setVisible(true);

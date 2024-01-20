@@ -180,12 +180,12 @@ public class StartUp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
-        // TODO add your handling code here:
+        // Close the current window (dispose of it)
         this.dispose();
     }//GEN-LAST:event_ExitButtonActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-        // TODO add your handling code here:
+        // Create and display a new Login window
         Login LoginFrame = new Login();
         LoginFrame.setVisible(true);
         LoginFrame.pack();
@@ -194,17 +194,19 @@ public class StartUp extends javax.swing.JFrame {
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
-        // TODO add your handling code here:
+         // Create and display a new Register window
         Register RegisterFrame = new Register();
          RegisterFrame.setVisible(true);
          RegisterFrame.pack();
          RegisterFrame.setLocationRelativeTo(null);
+         // Close the current window (dispose of it)
          this.dispose();
     }//GEN-LAST:event_RegisterButtonActionPerformed
 
     private void ExitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButtonMouseClicked
-        // TODO add your handling code here:
-        this.dispose();
+        // Mouse click event for the ExitButton
+        // Close the current window (dispose of it)
+         this.dispose();
     }//GEN-LAST:event_ExitButtonMouseClicked
 
 

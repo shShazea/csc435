@@ -9,6 +9,7 @@ import java.io.FileWriter;
 import javax.swing.JOptionPane;
 
 public class Booking extends javax.swing.JFrame {
+    // Variables to store selected values
     String seat; //store value seat radio
     String Driver;
     String pick;
@@ -20,11 +21,14 @@ public class Booking extends javax.swing.JFrame {
     double fare=0.0;
 
     public Booking() {
+        // Initialize the Booking frame
         initComponents();
+        // Populate the driver combo box from the text file
         combofromtxt();
     }
     public void combofromtxt()
     {
+        // Method to populate the driver combo box from the text file
         String filePath = "C:\\Users\\user\\Documents\\DRIVER.txt";
         File file = new File(filePath);
         
@@ -339,7 +343,7 @@ public class Booking extends javax.swing.JFrame {
     }//GEN-LAST:event_seat6ActionPerformed
 
     private void confirmbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmbtnActionPerformed
-        // TODO add your handling code here:
+         // Calculate fare based on pick and drop locations
         if(pick.equalsIgnoreCase(a))
         {
             if(drop.equalsIgnoreCase(b))
@@ -376,30 +380,34 @@ public class Booking extends javax.swing.JFrame {
             else if(drop.equalsIgnoreCase(b))
                 {fare=13.00;}   
         }
+         // Additional fare adjustment based on selected seat type
         if(seat.equalsIgnoreCase("6 seat"))
             {fare=fare+4;}
+        // Set the calculated fare in the fare text field
         inFare.setText(String.valueOf(fare));
     }//GEN-LAST:event_confirmbtnActionPerformed
 
     private void savebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savebtnActionPerformed
-        // TODO add your handling code here:
+        // Retrieve user input
         String name = inName.getText();
         String phone = inPhone.getText();
         String Date = inDate.getText();
     
         try
         {
+            // Write booking details to the Booking.txt file
             FileWriter Writer =new FileWriter("Booking.txt",true);
             Writer.write(name+";"+phone+";"+ Date +";"+ pick +";"+drop+";"+ seat +";"+Driver+";"+fare);
             Writer.write(System.getProperty("line.separator"));
             Writer.close();
+            // Display success message and open Payment window
             JOptionPane.showMessageDialog(null, "success");
             double fares=Double.parseDouble(inFare.getText());
             setVisible(false);
             new Payment (fares).setVisible(true);
-        }
-        catch(Exception e)
-        { JOptionPane.showMessageDialog(null, "error");
+        }catch(Exception e){ 
+             // Display error message if an exception occurs
+            JOptionPane.showMessageDialog(null, "error");
         }
     }//GEN-LAST:event_savebtnActionPerformed
 

@@ -6,6 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 public class Register extends javax.swing.JFrame {
+    // File path for storing user data
     private static final String usersFilePath = "C:/Users/user/Documents/UserData.txt";
     public Register() {
         initComponents();
@@ -285,21 +286,22 @@ public class Register extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        // Check if the entered password matches the confirmed password
         if(String.valueOf(txtPswrd.getPassword()).equals(String.valueOf(txtCPswrd.getPassword()))){
+         // If passwords match, retrieve user input
+            String name = txtName.getText();
+            String icNo = txtICNo.getText();
+            String phoneNo = txtPN.getText();
+            String username = txtUN.getText();
+            String pswrd = String.valueOf(txtPswrd.getPassword());
+            String conPswrd = String.valueOf(txtCPswrd.getPassword());
+            // Create a file object for user data
+            File file = new File(usersFilePath);
         
-        String name = txtName.getText();
-        String icNo = txtICNo.getText();
-        String phoneNo = txtPN.getText();
-        String username = txtUN.getText();
-        String pswrd = String.valueOf(txtPswrd.getPassword());
-        String conPswrd = String.valueOf(txtCPswrd.getPassword());
-        
-        File file = new File(usersFilePath);
-        
-        try {
-            FileWriter fw = new FileWriter (file,true);
-            fw.write("\nName: "+ name);
+            try {
+                // Append user information to the file
+                FileWriter fw = new FileWriter (file,true);
+                fw.write("\nName: "+ name);
                 fw.write("\nIC NO:"+ icNo);
                 fw.write("\nPhone No:"+ phoneNo);
                 fw.write("\nUsername:"+ username);
@@ -307,23 +309,25 @@ public class Register extends javax.swing.JFrame {
                 fw.write("\n---------------");
                 fw.close();
             
-        } catch (IOException ex) {
+            } catch (IOException ex) {
             Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
-        }    
-        JOptionPane.showMessageDialog(null, "Register Successful");
+            }  
+            // Display a success message and open the Login window
+            JOptionPane.showMessageDialog(null, "Register Successful");
             Login LoginFrame = new Login();
             LoginFrame.setVisible(true);
             LoginFrame.pack();
             LoginFrame.setLocationRelativeTo(null);
             this.dispose();
         }else{
+            // Display an error message if passwords don't match
             Message.setText("The password doesn't match!");
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        // Open the Login window
         Login LoginFrame = new Login();
         LoginFrame.setVisible(true);
         LoginFrame.pack();
@@ -336,19 +340,23 @@ public class Register extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNameActionPerformed
 
     private void jcShow_Pass1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcShow_Pass1ActionPerformed
-        // TODO add your handling code here:
+        // Check if the "Show Password" checkbox is selected
         if (jcShow_Pass1.isSelected()){
+            // If selected, the actual characters shown.
             txtPswrd.setEchoChar((char)0);
         }else{
+            // If not selected, the character hidden.
             txtPswrd.setEchoChar('*');
         }
     }//GEN-LAST:event_jcShow_Pass1ActionPerformed
 
     private void jcShow_Pass2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcShow_Pass2ActionPerformed
-        // TODO add your handling code here:
+        // Check if the "Show Password" checkbox is selected
         if (jcShow_Pass2.isSelected()){
+            // If selected, the actual characters shown.
             txtCPswrd.setEchoChar((char)0);
         }else{
+            // If not selected, the character hidden.
             txtCPswrd.setEchoChar('*');
         }
     }//GEN-LAST:event_jcShow_Pass2ActionPerformed

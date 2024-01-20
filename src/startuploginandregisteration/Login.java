@@ -242,11 +242,12 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_loginUsernameActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-        // TODO add your handling code here:
+        // Get the entered username and password from the user interface components
         String username = loginUsername.getText();
         String pswrd = String.valueOf(loginpass.getPassword());
 
     try {
+        // Read the user information from the file
         FileReader fr = new FileReader(usersFilePath);
         Scanner sc = new Scanner(fr);
         String line;
@@ -254,13 +255,14 @@ public class Login extends javax.swing.JFrame {
         boolean loginSuccessful = false;
             String storedUsername = null;
             String storedPassword = null;
-
+            // Loop through each line in the file   
             while (sc.hasNextLine()) {
                 line = sc.nextLine();
                 System.out.println("Line read from file: " + line);  
                 String[] userInformation = line.split(":");
 
                 if (userInformation.length >= 2) {
+                    // Extract attribute name and value from the split array
                     String attributeName = userInformation[0].trim();
                     String attributeValue = userInformation[1].trim();
 
@@ -305,7 +307,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_loginpassActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+         // Create and display a new Register window
         Register RegisterFrame = new Register();
          RegisterFrame.setVisible(true);
          RegisterFrame.pack();
@@ -314,10 +316,12 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jShow_PassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jShow_PassActionPerformed
-        // TODO add your handling code here:
+        // Check if the "Show Password" checkbox is selected
          if (jShow_Pass.isSelected()){
+             // If selected, the actual characters shown.
             loginpass.setEchoChar((char)0);
         }else{
+            // If not selected, the character hidden.
             loginpass.setEchoChar('*');
         }
     }//GEN-LAST:event_jShow_PassActionPerformed
