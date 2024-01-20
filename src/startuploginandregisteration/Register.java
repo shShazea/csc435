@@ -7,12 +7,8 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-
-
 public class Register extends javax.swing.JFrame {
     private static final String usersFilePath = "C:/Users/user/Documents/UserData.txt";
-
-    
     public Register() {
         initComponents();
     }

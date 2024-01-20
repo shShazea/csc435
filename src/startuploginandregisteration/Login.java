@@ -1,7 +1,4 @@
-
 package startuploginandregisteration;
-
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,24 +7,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-
 public class Login extends javax.swing.JFrame {
     private static final String usersFilePath = "C:/Users/user/Documents/UserData.txt";
-
-
-    
-    
-    
-    
-    
     public Login() {
-        initComponents();
-        
+        initComponents();   
     }
-
-     
-    
- 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -305,7 +289,6 @@ public class Login extends javax.swing.JFrame {
         
                 }
             }
-
             if (!loginSuccessful) {
                 JOptionPane.showMessageDialog(null, "Incorrect Username or Password.");
             }
@@ -314,11 +297,7 @@ public class Login extends javax.swing.JFrame {
         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
     }catch (IOException ex){
         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-    }
-
-        
-        
-        
+    }     
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void loginpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginpassActionPerformed
@@ -342,8 +321,6 @@ public class Login extends javax.swing.JFrame {
             loginpass.setEchoChar('*');
         }
     }//GEN-LAST:event_jShow_PassActionPerformed
-
-  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton LoginButton;

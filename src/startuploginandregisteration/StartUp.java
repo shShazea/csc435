@@ -1,15 +1,8 @@
-
 package startuploginandregisteration;
-
-
 public class StartUp extends javax.swing.JFrame {
-
-    
     public StartUp() {
         initComponents();
     }
-
-  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -21,9 +14,9 @@ public class StartUp extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jToggleButton3 = new javax.swing.JToggleButton();
+        ExitButton = new javax.swing.JToggleButton();
+        LoginButton = new javax.swing.JToggleButton();
+        RegisterButton = new javax.swing.JToggleButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -82,36 +75,36 @@ public class StartUp extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/photo_2024-01-16_01-23-33.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
 
-        jToggleButton1.setBackground(new java.awt.Color(17, 71, 125));
-        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton1.setText("EXIT");
-        jToggleButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        ExitButton.setBackground(new java.awt.Color(17, 71, 125));
+        ExitButton.setForeground(new java.awt.Color(255, 255, 255));
+        ExitButton.setText("EXIT");
+        ExitButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ExitButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jToggleButton1MouseClicked(evt);
+                ExitButtonMouseClicked(evt);
             }
         });
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        ExitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-
-        jToggleButton2.setBackground(new java.awt.Color(17, 71, 125));
-        jToggleButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton2.setText("LOGIN");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                ExitButtonActionPerformed(evt);
             }
         });
 
-        jToggleButton3.setBackground(new java.awt.Color(17, 71, 125));
-        jToggleButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton3.setText("REGISTER");
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+        LoginButton.setBackground(new java.awt.Color(17, 71, 125));
+        LoginButton.setForeground(new java.awt.Color(255, 255, 255));
+        LoginButton.setText("LOGIN");
+        LoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
+                LoginButtonActionPerformed(evt);
+            }
+        });
+
+        RegisterButton.setBackground(new java.awt.Color(17, 71, 125));
+        RegisterButton.setForeground(new java.awt.Color(255, 255, 255));
+        RegisterButton.setText("REGISTER");
+        RegisterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegisterButtonActionPerformed(evt);
             }
         });
 
@@ -130,11 +123,11 @@ public class StartUp extends javax.swing.JFrame {
                 .addGap(0, 7, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RegisterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,15 +148,15 @@ public class StartUp extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addGap(24, 24, 24)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1)
-                    .addComponent(jToggleButton2)
-                    .addComponent(jToggleButton3))
+                    .addComponent(ExitButton)
+                    .addComponent(LoginButton)
+                    .addComponent(RegisterButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
 
-        jToggleButton1.getAccessibleContext().setAccessibleName("LOGIN");
+        ExitButton.getAccessibleContext().setAccessibleName("LOGIN");
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 140, 400, 450);
@@ -186,40 +179,39 @@ public class StartUp extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
         // TODO add your handling code here:
         this.dispose();
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_ExitButtonActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+    private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         // TODO add your handling code here:
         Login LoginFrame = new Login();
         LoginFrame.setVisible(true);
         LoginFrame.pack();
         LoginFrame.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    }//GEN-LAST:event_LoginButtonActionPerformed
 
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+    private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
         // TODO add your handling code here:
         Register RegisterFrame = new Register();
          RegisterFrame.setVisible(true);
          RegisterFrame.pack();
          RegisterFrame.setLocationRelativeTo(null);
          this.dispose();
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
+    }//GEN-LAST:event_RegisterButtonActionPerformed
 
-    private void jToggleButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton1MouseClicked
+    private void ExitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButtonMouseClicked
         // TODO add your handling code here:
         this.dispose();
-    }//GEN-LAST:event_jToggleButton1MouseClicked
+    }//GEN-LAST:event_ExitButtonMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
-   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton ExitButton;
+    private javax.swing.JToggleButton LoginButton;
+    private javax.swing.JToggleButton RegisterButton;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -229,8 +221,5 @@ public class StartUp extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
     // End of variables declaration//GEN-END:variables
 }
