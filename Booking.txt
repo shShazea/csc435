@@ -1,3 +1,4 @@
 
 Adlina;0123456789;1/2/2024;KTM;Taman Perumahan;4 seater;Sophie orange Coupe RST567 4;8.0
 AHMAD BIN ALI;0124356789;12/1/2024;Taman Perumahan;Uitm;4 seater;Sophie orange Coupe RST567 4;4.0
+Ahmad bin Muhammad;0123456789;1/2/2024;KTM;Uitm;4 seater;Eva white Minivan JKL123 4;7.0
